@@ -752,7 +752,8 @@ class FlxCamera extends FlxBasic
 		_helperMatrix = null;
 	#end
 		
-		_bounds = null;
+		//_bounds = null;
+		_bounds.put();
 		scroll = FlxDestroyUtil.put(scroll);
 		targetOffset = FlxDestroyUtil.put(targetOffset);
 		deadzone = FlxDestroyUtil.put(deadzone);

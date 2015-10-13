@@ -99,7 +99,8 @@ class FlxDrawTrianglesItem extends FlxDrawBaseItem<FlxDrawTrianglesItem>
 		indices = null;
 		uvtData = null;
 		colors = null;
-		bounds = null;
+		//bounds = null;
+		bounds.put();
 	}
 	
 	public function addTriangles(vertices:DrawData<Float>, indices:DrawData<Int>, uvtData:DrawData<Float>, colors:DrawData<Int> = null, position:FlxPoint = null, cameraBounds:FlxRect = null):Void
