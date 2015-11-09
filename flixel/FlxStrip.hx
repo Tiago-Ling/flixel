@@ -32,7 +32,7 @@ class FlxStrip extends FlxSprite
 	
 	public var colors:DrawData<Int>;
 	
-	public function new(X:Float = 0, Y:Float = 0, ?SimpleGraphic:FlxGraphicAsset)
+	public function new(X:Float = 0, Y:Float = 0, ?SimpleGraphic:FlxGraphicAsset, ?persist:Bool = false)
 	{
 		super(X, Y, SimpleGraphic);
 		
@@ -40,6 +40,8 @@ class FlxStrip extends FlxSprite
 		indices = new #if flash Vector #else Array #end<Int>();
 		uvtData = new #if flash Vector #else Array #end<Float>();
 		colors = new #if flash Vector #else Array #end<Int>();
+		
+		frames.parent.persist = persist;
 	}
 	
 	override public function destroy():Void 
